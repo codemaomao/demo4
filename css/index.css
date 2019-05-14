@@ -143,3 +143,15 @@ span.fleft {
 	position: relative;
 	top: 5px;
 }
+.mui-switch-mini.mui-active .mui-switch-handle {
+    -webkit-transform: translate(26px,0);
+    transform: translate(26px,0);
+}
+.handle{
+	width: 100px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top:0;
+	z-index: 9999;
+}

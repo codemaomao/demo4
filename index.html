@@ -41,9 +41,10 @@
 			
 			<div class="container_settingContent">
 				<span>报警开关</span>
-				<div class="mui-switch mui-switch-blue mui-switch-mini">
+				<div class="mui-switch mui-switch-blue mui-switch-mini" :class="active ? 'mui-active' : '' ">
 					<div class="mui-switch-handle"></div>
 				</div>
+				<div class="handle" @click="handle"></div>
 			</div>
 			<div class="explain">
 				<div class="explain_title">辅助说明:</div>
@@ -60,7 +61,23 @@ new Vue({
   data: {
     messageTitle: '烟雾报警器',
     status:'在线',
-    numCurrent:'15%'
+    numCurrent:'15%',
+    active:true
+  },
+  methods:{
+  	handle:function(){
+  		var that=this
+  		if(this.active){
+  			var btnArray = ['否', '是'];
+			mui.confirm('确认关闭报警提醒？', '提醒', btnArray, function(e) {
+				if (e.index == 1) {
+					that.active=false
+				}
+			})
+  		}else{
+  			this.active=true
+  		}
+  	}
   }
 })
 </script>
