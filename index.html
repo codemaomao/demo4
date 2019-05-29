@@ -1,84 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="css/mui.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <script src="js/mui.min.js"></script>
-    <script type="text/javascript" src="js/vue.js"></script>
-    <title>首页</title>
-</head>
-<body>
-	<div class="container" id="app">
-		<img src="img/bg.png" alt="" class="container_bg"/>
-		<div class="container_wrap">
-			<div class="container_setting">
-				<img src="img/back.png" alt="" class="fleft"/>
-				<span class="fleft" v-html="messageTitle"></span>
-				<img src="img/setting.png" alt="" class="fright"/>
-			</div>
-			<div class="container_status">
-				<span>设备状态</span>
-				<span v-html="status"></span>
-			</div>
-			<div class="container_settingContent">
-				<span>当前电量</span>
-				<span class="fright numCu" v-html="numCurrent"></span>
-				<div class="fright">
-					<div class="progressWrap">
-						<div class="progressInner"></div>
-					</div>
-				</div>
-				
-			</div>
-			<div class="container_settingContent">
-				<span>低电提醒</span>
-				<div class="mui-switch mui-switch-blue mui-switch-mini">
-					<div class="mui-switch-handle"></div>
-				</div>
-			</div>
-			
-			<div class="container_settingContent">
-				<span>报警开关</span>
-				<div class="mui-switch mui-switch-blue mui-switch-mini" :class="active ? 'mui-active' : '' ">
-					<div class="mui-switch-handle"></div>
-				</div>
-				<div class="handle" @click="handle"></div>
-			</div>
-			<div class="explain">
-				<div class="explain_title">辅助说明:</div>
-				<div class="explain_content">这里是一句辅助说明</div>
-			</div>
-		</div>	
-					
 
-	</div>
+<html>
+
+<head>
+
+<a href="javascript:;" target"_blank"><img src="images/f550e18e3abb4acb8204d14448752e1c_th.jpg.gif" ></a>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title></title>
+
+<meta charset="utf-8" />
+
+</head>
+
+<body style="text-align:center;background-color: bisqueï¼›padding-top: 1000px;">
+
+<br><h3><font color="#c11dd9">因商品特殊性，购买后请务必加群，或者加Q客服3230422520 或 VX客服qiancheng333444</font></h3>
+<br><h3><font color="#281fdf">购买后请务必加售后QQ群号218499627,群公告有月/季/年卡续费连接</font></h3>
+
+<h1><font color="#FF0000">点击以下教程链接可查看不同设备的教程</font></h1>
+</h3><font color="#FF0000">温馨提示：购买后支持以下所有设备使用，但同时只能1个设备使用，多设备同时占用端口会导致节点锁定无效 . .不同设备之间切换使用时，先退出软后再去其他设备登录哦 </font></h3>
+.</h3>
+<br><h2><font color="#281fdf"><a href="anzhuo.html" >安卓手机/平板客户端教程==点我</a></font></h2><br>
+<br><h2><font color="#281fdf"><a href="diannao.html" >windows电脑端使用教程==点我</a></font></h2><br>
+<br><h2><font color="#281fdf"><a href="pingguoxin.html" >苹果手机/平板客户端教程==点我</a></font></h2><br>
+<br><h2><font color="#281fdf"><a href="pingguodiannao.html" >苹果MAC电脑教程==点我</a></font></h2><br>
+<br><h3><font color="#e70837">有问题加QQ群，联系管理员处理：群号218499627</a></font></h3> <br>
+
+</div>
+<div><body background="images/timg-image&quality=80&size=b9999_10000&sec=1550238038111&di=b50500d17be10a503ba6ecc5f3cfa293&imgtype=0&src=http---img.pptjia.com-image-20171220-fb897db3083681870fa1684a69d00252.jpg" tppabs="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550238038111&di=b50500d17be10a503ba6ecc5f3cfa293&imgtype=0&src=http%3A%2F%2Fimg.pptjia.com%2Fimage%2F20171220%2Ffb897db3083681870fa1684a69d00252.jpg"></div>
 </body>
-<script>
-new Vue({
-  el: '#app',
-  data: {
-    messageTitle: '烟雾报警器',
-    status:'在线',
-    numCurrent:'15%',
-    active:true
-  },
-  methods:{
-  	handle:function(){
-  		var that=this
-  		if(this.active){
-  			var btnArray = ['否', '是'];
-			mui.confirm('确认关闭报警提醒？', '提醒', btnArray, function(e) {
-				if (e.index == 1) {
-					that.active=false
-				}
-			})
-  		}else{
-  			this.active=true
-  		}
-  	}
-  }
-})
-</script>
+
 </html>
